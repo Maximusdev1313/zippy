@@ -1,12 +1,16 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+import horizontalBorder from "./components/client/horizontalBorder.vue";
+import Header from "./components/client/header.vue";
 </script>
 
 <template>
   <div>
     <header>
+      <horizontalBorder />
+
       <div class="wrapper">
-        <nav></nav>
+        <Header />
       </div>
     </header>
 

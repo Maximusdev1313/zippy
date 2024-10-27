@@ -57,18 +57,16 @@
 .button {
   display: inline-block;
   position: relative;
-  background-color: var(--button-background);
-  color: var(--button-text);
   padding: 10px 20px;
   border-radius: 15px;
   border: 1px solid transparent;
   transition: 0.3s;
   text-transform: capitalize;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
+ 
+}
+.button-yellow{
+  background-color: var(--button-background);
+  color: var(--button-text);
 }
 .button:hover {
   box-shadow: 0.1px 1px 15px 0.1px rgba(163,159,159,0.73);
@@ -76,7 +74,15 @@
 -moz-box-shadow: 0.1px 1px 15px 0.1px rgba(163,159,159,0.73);
 transition: 0.3s;
 }
-.button:after {
+.click{
+  position: relative;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.click:after {
   content: "";
   background: #faf88d;
   display: block;
@@ -90,7 +96,7 @@ transition: 0.3s;
   transition: all 0.8s
 }
 
-.button:active:after {
+.click:active:after {
   padding: 0;
   margin: 0;
   opacity: 1;
