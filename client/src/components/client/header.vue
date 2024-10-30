@@ -1,10 +1,16 @@
-<script setup></script>
+<script setup>
+import { useClientStore } from "@/stores/clientStore";
+const clientStore = useClientStore();
+</script>
 
 <template>
   <div class="header">
     <div class="container">
       <div class="wrapper">
-        <div class="logo">Logo</div>
+        <div class="logo">
+          <span class="logo-z">Z</span><span>ippy</span
+          ><span class="dot">.</span>
+        </div>
         <div class="main">
           <div class="burger">
             <lord-icon
@@ -32,8 +38,17 @@
         </div>
         <nav>
           <ul>
-            <li>user</li>
-            <li>user</li>
+            <li>
+              <div class="card__wishlist">
+                <lord-icon
+                  src="https://cdn.lordicon.com/aydxrkfl.json"
+                  trigger="hover"
+                  colors="primary:#848484,secondary:#34bcec"
+                  style="width: 25px; height: 25px"
+                >
+                </lord-icon>
+              </div>
+            </li>
             <li
               style="
                 display: flex;
@@ -42,7 +57,7 @@
               "
             >
               <div class="icon-block">
-                <div class="quantity">3</div>
+                <div class="quantity">35</div>
                 <lord-icon
                   src="https://cdn.lordicon.com/ggirntso.json"
                   trigger="hover"
@@ -52,7 +67,7 @@
                 >
                 </lord-icon>
               </div>
-              300000 so'm
+              {{ clientStore.totalAmount }} so'm
             </li>
           </ul>
         </nav>
@@ -64,6 +79,7 @@
 .header {
   width: 100%;
   height: 90px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,6 +96,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.logo {
+  font-size: 50px;
+  font-weight: bolder;
+}
+.logo-z {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.dot {
+  color: brown;
 }
 .burger {
   margin: 0 20px;
@@ -138,6 +167,7 @@ li {
 }
 .quantity {
   background-color: rgb(251, 255, 0);
+  color: black;
   border-radius: 50%;
   width: 20px;
   height: 20px;

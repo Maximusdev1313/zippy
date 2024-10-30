@@ -8,9 +8,10 @@
   --vt-c-black-soft: #222222;
   --vt-c-black-mute: #282828;
   --vt-c-yellow: rgb(240, 212, 56);
+  --vt-c-yellow-soft: rgb(255, 245, 182);
 
   --vt-c-indigo: #2c3e50;
-
+  --vt-c-blue: #34bcec;
   --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
   --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
   --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
@@ -33,9 +34,11 @@
 
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
-  
+  --color-text-blue: var(--vt-c-blue);
   --section-gap: 160px;
   --button-background: var(--vt-c-yellow);
+  --gold-background: var(--vt-c-yellow-soft);
+
   --button-text: var(--vt-c-black)
 
 }
@@ -51,7 +54,9 @@
   
   --color-heading: var(--vt-c-text-dark-1);
   --color-text: var(--vt-c-text-dark-2);
+  --color-text-blue: var(--vt-c-white);
   --button-background: var(--vt-c-yellow);
+  --gold-background: var(--vt-c-black-soft);
   --button-text: var(--vt-c-black-mute)
 }
 .button {

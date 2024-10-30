@@ -18,4 +18,9 @@ import Header from "./components/client/header.vue";
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+header {
+  width: 100%;
+  position: fixed;
+}
+</style>

@@ -1,38 +1,13 @@
 <script setup>
-import { ref } from "vue";
-const prods = ref([]);
-/**
- * Fetches products from the Fake Store API and updates the prods ref.
- *
- * @async
- * @function get
- */
-const get = async () => {
-  try {
-    /**
-     * Fetches data from the API and parses it as JSON.
-     *
-     * @see https://fakestoreapi.com/products
-     */
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((json) => (prods.value = json));
-  } catch (err) {
-    /**
-     * Logs any errors that occur during the fetch operation.
-     *
-     * @param {Error} err
-     */
-    console.log(err);
-  }
-};
-get();
+import { onBeforeMount, ref } from "vue";
+import Carusel from "../../components/client/carusel.vue";
+import simpleCard from "@/components/client/simpleCard.vue";
+import { useClientStore } from "../../stores/clientStore";
 
-/**
- * A ref to track whether the app is in dark mode.
- *
- * @type {Ref<boolean>}
- */
+const clientStore = useClientStore();
+onBeforeMount(() => {
+  clientStore.getProducts();
+});
 const isDarkMode = ref(false);
 
 /**
@@ -64,8 +39,17 @@ const toggleTheme = () => {
 };
 </script>
 <template>
-  <div>
-    <button @click="toggleTheme" class="button click" style="margin: 20px">
+  <div class="wrapper">
+    <Carusel />
+    <div class="container">
+      <div class="title">Products</div>
+      <simpleCard :products="clientStore.products" />
+    </div>
+    <button
+      @click="toggleTheme"
+      class="button button-yellow click"
+      style="margin: 20px"
+    >
       Toggle Theme
     </button>
     <!-- <div v-for="prod in prods" :key="prod.id" class="card" style="margin: 10px">
@@ -75,3 +59,8 @@ const toggleTheme = () => {
     </div> -->
   </div>
 </template>
+<style scoped>
+.wrapper {
+  margin-top: 90px;
+}
+</style>

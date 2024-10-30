@@ -10,7 +10,9 @@
     "test:unit": "vitest"
   },
   "dependencies": {
-   
+    "@lordicon/element": "^1.10.0",
+    "axios": "^1.7.7",
+    "lottie-web": "^5.12.2",
     "pinia": "^2.2.4",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
