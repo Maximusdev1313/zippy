@@ -87,7 +87,7 @@ onMounted(() => {
 <style scoped>
 .carousel {
   width: 100%;
-  height: 450px;
+  height: 500px;
   background-image: url("https://www.shutterstock.com/image-photo/minimal-abstract-white-background-smooth-600nw-2266712555.jpg");
   background-size: cover;
   display: flex;

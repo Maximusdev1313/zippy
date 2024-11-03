@@ -14,7 +14,7 @@ import Header from "./components/client/header.vue";
       </div>
     </header>
 
-    <RouterView />
+    <RouterView class="view" />
   </div>
 </template>
 
@@ -22,5 +22,7 @@ import Header from "./components/client/header.vue";
 header {
   width: 100%;
   position: fixed;
+  top: 0;
+  z-index: 999;
 }
 </style>

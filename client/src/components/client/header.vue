@@ -67,7 +67,7 @@ const clientStore = useClientStore();
                 >
                 </lord-icon>
               </div>
-              {{ clientStore.totalAmount }} so'm
+              {{ clientStore.totalAmount.toFixed(2) }} so'm
             </li>
           </ul>
         </nav>

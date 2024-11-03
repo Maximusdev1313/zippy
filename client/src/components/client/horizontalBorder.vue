@@ -1,8 +1,8 @@
 <script setup></script>
 
 <template>
-  <div class="container">
-    <div class="horizontal-border">
+  <div class="horizontal-border">
+    <div class="container">
       <div class="slogan">Save your money, change your life</div>
       <ul>
         <li class="click">
@@ -41,9 +41,11 @@
 </template>
 <style scoped>
 .horizontal-border {
+  background-color: var(--color-background-soft);
   width: 100%;
   height: 40px;
-  background-color: transparent;
+}
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;

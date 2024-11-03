@@ -7,7 +7,8 @@ export const useCentralStore = defineStore('central', {
   actions: {
     async getApi(api) {
       try {
-        const response = await axios.get(api)
+        const response = await axios.get(this.api)
+        console.log(response.data);
         return response.data
       } catch (err) {
         /**

@@ -40,7 +40,7 @@ const toggleTheme = () => {
 </script>
 <template>
   <div class="wrapper">
-    <Carusel />
+    <Carusel style="margin-top: 130px" />
     <div class="container">
       <div class="title">Products</div>
       <simpleCard :products="clientStore.products" />
@@ -59,8 +59,4 @@ const toggleTheme = () => {
     </div> -->
   </div>
 </template>
-<style scoped>
-.wrapper {
-  margin-top: 90px;
-}
-</style>
+<style scoped></style>
